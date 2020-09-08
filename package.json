@@ -9,7 +9,9 @@
     "ora": "^5.1.0"
   },
   "scripts": {
-    "postinstall": "node update-submodules"
+    "update-deps": "node update-submodules",
+    "update": "git submodule update --init && npm run update-deps",
+    "postinstall": "npm run update-deps"
   },
   "repository": {
     "type": "git",
